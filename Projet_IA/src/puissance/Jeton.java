@@ -1,20 +1,18 @@
-public class Jeton
-{
+package puissance;
 
-    public enum Couleur
-    {
+public class Jeton {
+
+    public enum Couleur {
         ROUGE, JAUNE
     }
 
     private Couleur couleur;
 
-    public Jeton(Couleur couleur)
-    {
+    public Jeton(Couleur couleur) {
         this.couleur = couleur;
     }
 
-    public Couleur getCouleur()
-    {
+    public Couleur getCouleur() {
         return couleur;
     }
 }
