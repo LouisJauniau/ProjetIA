@@ -1,3 +1,5 @@
+package puissance;
+
 import java.util.Random;
 
 public class JoueurIA extends Joueur {
@@ -6,8 +8,12 @@ public class JoueurIA extends Joueur {
         super(nom);
     }
 
-    public int jouer()
-    {
-        return new Random().nextInt(7) + 1; // Génère un nombre entre 1 et 7
+    @Override
+    public int jouer() {
+        //Choix aléatoire entre 1 et 7 pour l'instant
+        int coup = new Random().nextInt(7) + 1;
+        System.out.println(getNom() + " (IA) joue en colonne : " + coup);
+        return coup;
     }
 }
+

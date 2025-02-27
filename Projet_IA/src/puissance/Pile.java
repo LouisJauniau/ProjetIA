@@ -1,37 +1,33 @@
+package puissance;
 
-import java.util.*;
 
-/*
-Classe qui represente les colonnes de la grille de puissance 4
- */
+import java.util.ArrayList;
+
+//Une "Colonne" de la grille de jeu
 public class Pile {
 
     private ArrayList<Jeton> colonne;
 
-    public Pile()
-    {
+    public Pile() {
         colonne = new ArrayList<>();
     }
 
-    public void ajouter(Jeton j)
-    {
-        if (colonne != null || colonne.size()<6)
-        {
+    public void ajouter(Jeton j) {
+        //On vérifie que la taille est < 6
+        if (colonne.size() < 6) {
             colonne.add(j);
-        }
-        else
-        {
-            throw new IndexOutOfBoundsException("la colonne est pleine");
+        } else {
+            throw new IndexOutOfBoundsException("La colonne est pleine");
         }
     }
 
-    public boolean isFull()
-    {
+    //Colonne pleine
+    public boolean isFull() {
         return colonne.size() == 6;
     }
 
-    public ArrayList<Jeton> getColonne()
-    {
+    public ArrayList<Jeton> getColonne() {
         return colonne;
     }
 }
+

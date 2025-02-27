@@ -1,13 +1,16 @@
+package puissance;
 
+public abstract class Joueur {
 
-public abstract class Joueur
-{
+    private String nom;
 
-     private String nom;
+    public Joueur(String nom) {
+        this.nom = nom;
+    }
 
-     public Joueur(String nom)
-     {
-          this.nom = nom;
-     }
-     public abstract int jouer();
+    public String getNom() {
+        return nom;
+    }
+
+    public abstract int jouer();
 }

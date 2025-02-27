@@ -1,25 +1,26 @@
+package puissance;
+
 import java.util.Scanner;
 
-public class JoueurHumain extends Joueur{
+public class JoueurHumain extends Joueur {
 
-    public JoueurHumain(String nom){
+    public JoueurHumain(String nom) {
         super(nom);
-
     }
 
     @Override
     public int jouer() {
         Scanner scan = new Scanner(System.in);
-        int choix = -1; // Valeur par défaut invalide
+        int choix = -1;
 
         while (true) {
-            System.out.println("Entrez un nombre entre 1 et 7 : ");
-            String input = scan.nextLine().trim(); // Lecture et suppression des espaces inutiles
+            System.out.print(getNom() + ", entrez un nombre entre 1 et 7 : ");
+            String input = scan.nextLine().trim();
 
             try {
-                choix = Integer.parseInt(input); // Conversion String → int
+                choix = Integer.parseInt(input);
                 if (choix >= 1 && choix <= 7) {
-                    break; // Sortie de la boucle si le nombre est valide
+                    break;
                 } else {
                     System.out.println("Nombre hors limites. Veuillez entrer un nombre entre 1 et 7.");
                 }
@@ -28,6 +29,6 @@ public class JoueurHumain extends Joueur{
             }
         }
 
-        return choix; // Retourne le choix valide
+        return choix;
     }
 }
